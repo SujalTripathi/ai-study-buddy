@@ -119,40 +119,46 @@ Create a collection named `study_notes` with these attributes:
 ## 🏗️ Project Structure
 
 ai-study-buddy/
+├── node_modules/
+├── public/
 ├── src/
-│ ├── components/
-│ │ ├── auth/
-│ │ │ ├── LoginForm.jsx # Login form component
-│ │ │ └── SignupForm.jsx # Signup form component
-│ │ ├── layout/
-│ │ │ └── Header.jsx # App header with logout
-│ │ └── notes/
-│ │ ├── NoteCard.jsx # Individual note card
-│ │ └── NoteForm.jsx # Note creation form
-│ ├── hooks/
-│ │ ├── useAuth.js # Authentication hook
-│ │ └── useNotes.js # Notes management hook
-│ ├── pages/
-│ │ ├── Login.jsx # Login/signup page
-│ │ └── Dashboard.jsx # Main dashboard
-│ ├── services/
-│ │ ├── auth.service.js # Auth API calls
-│ │ └── notes.service.js # Notes CRUD operations
-│ ├── styles/
-│ │ └── theme.js # Cyberpunk theme config
-│ ├── utils/
-│ │ ├── constants.js # App constants
-│ │ └── validators.js # Input validation
-│ ├── config/
-│ │ └── appwrite.config.js # Appwrite configuration
-│ ├── App.jsx # Root component
-│ ├── App.css # Global styles
-│ └── main.jsx # Entry point
-├── .env.example # Environment template
+│   ├── components/
+│   │   ├── auth/
+│   │   │   ├── LoginForm.jsx
+│   │   │   └── SignupForm.jsx
+│   │   ├── layout/
+│   │   │   └── Header.jsx
+│   │   └── notes/
+│   │       ├── NoteCard.jsx
+│   │       └── NoteForm.jsx
+│   ├── hooks/
+│   │   ├── useAuth.js
+│   │   └── useNotes.js
+│   ├── pages/
+│   │   ├── Login.jsx
+│   │   └── Dashboard.jsx
+│   ├── services/
+│   │   ├── auth.service.js
+│   │   └── notes.service.js
+│   ├── styles/
+│   │   └── theme.js
+│   ├── utils/
+│   │   ├── constants.js
+│   │   └── validators.js
+│   ├── config/
+│   │   └── appwrite.config.js
+│   ├── App.jsx
+│   ├── App.css
+│   └── main.jsx
+├── .env
+├── .env.example
+├── .gitignore
+├── index.html
 ├── package.json
+├── package-lock.json
+├── vite.config.js
+├── eslint.config.js
 └── README.md
-
-
 
 ## 🎨 Design System
 
