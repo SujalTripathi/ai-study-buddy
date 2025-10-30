@@ -1,0 +1,142 @@
+/**
+ * Cyberpunk Theme - Global Styles
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #0a0e27;
+  color: #ffffff;
+}
+
+/* Animations */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes glow {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(255, 0, 110, 0.5), 
+                0 0 40px rgba(183, 33, 255, 0.3);
+  }
+  50% { 
+    box-shadow: 0 0 30px rgba(255, 0, 110, 0.8), 
+                0 0 60px rgba(183, 33, 255, 0.5);
+  }
+}
+
+/* Input Focus Effects */
+input:focus, textarea:focus, select:focus {
+  border-color: #b721ff !important;
+  box-shadow: 0 0 0 4px rgba(183, 33, 255, 0.2), 
+              0 0 20px rgba(183, 33, 255, 0.4) !important;
+}
+
+/* Button Hover Effects */
+button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(255, 0, 110, 0.6), 
+              0 0 60px rgba(183, 33, 255, 0.4);
+  filter: brightness(1.2);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Card Hover Effects */
+.note-card:hover {
+  transform: translateY(-4px);
+  border-color: #ff006e !important;
+  box-shadow: 0 0 40px rgba(255, 0, 110, 0.4), 
+              0 0 80px rgba(183, 33, 255, 0.2);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0e27;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #ff006e 0%, #b721ff 100%);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #ff006e 0%, #00d9ff 100%);
+}
+
+/* Selection Color */
+::selection {
+  background: #ff006e;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .grid-layout {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+  .grid-layout {
+    grid-template-columns: 400px 1fr !important;
+    gap: 32px !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .grid-layout {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .sidebar {
+    position: relative !important;
+    top: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .notes-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .header-content {
+    padding: 20px !important;
+  }
+  
+  .logo-text {
+    font-size: 24px !important;
+  }
+  
+  .main-content {
+    padding: 24px !important;
+  }
+}
